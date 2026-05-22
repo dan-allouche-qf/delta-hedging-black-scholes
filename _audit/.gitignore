@@ -1,0 +1,3 @@
+# audit-local artifacts not committed (large + reproducible)
+.venv-audit/
+run*.ipynb
