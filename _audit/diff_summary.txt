@@ -1,0 +1,16 @@
+ Delta_Hedging_Analysis.ipynb  | 2785 ++++++++++++++++++++---------------------
+ README.md                     |   12 +-
+ _audit/.gitignore             |    3 +
+ _audit/.gitkeep               |    0
+ _audit/abs_paths.txt          |    0
+ _audit/audit_quality.md       |   18 +
+ _audit/claims.csv             |   23 +
+ _audit/coherence.md           |   26 +
+ _audit/final_report.md        |   47 +
+ _audit/findings_candidates.md |   37 +
+ _audit/findings_confirmed.md  |   27 +
+ _audit/findings_rejected.md   |   26 +
+ _audit/inventory.md           |   62 +
+ _audit/pass_1.md              |   26 +
+ _audit/secrets_trufflehog.txt |    0
+ 15 files changed, 1696 insertions(+), 1396 deletions(-)
