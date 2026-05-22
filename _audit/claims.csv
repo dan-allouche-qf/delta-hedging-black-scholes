@@ -1,0 +1,23 @@
+id,section_rapport,page_ou_ligne,chiffre_cite,type,fichier_source_attendu,valeur_recalculee,match,tolerance,note,verifie_2x
+1,README Model Parameters,L40,r=10.0%,scalar,nb cell4 output,10.0%,Y,exact,risk-free rate displayed,Y
+2,README Model Parameters,L41,sigma=20.0%,scalar,nb cell4 output,20.0%,Y,exact,volatility,Y
+3,README Model Parameters,L42,S0=100.00 EUR,scalar,nb cell4 output,100.00,Y,exact,initial price,Y
+4,README Model Parameters,L43,K=90.00 EUR,scalar,nb cell4 output,90.00,Y,exact,strike,Y
+5,README Model Parameters,L44,T=0.25 years,scalar,nb cell4 output,0.250,Y,exact,maturity,Y
+6,README Model Parameters,L45,1000 simulations,int,nb cell4 output,1000,Y,exact,Monte Carlo n_simulations,Y
+7,README Key Results,L62,sigma proportional 1/sqrt(n),law,nb cell14 + recalculated,slope log-log=-0.47,Y,~5%,theoretical -0.5; empirical -0.47 over n=1/3/12/84,Y
+8,NB section 6.6,L514,"mean error -0.0949 (n=0)",scalar,nb cell10 output,-0.0949,Y,exact,no hedging mean,Y
+9,NB section 6.6,L514,"mean error -0.0018 (n=84)",scalar,nb cell10 output,-0.0018,Y,exact,daily hedging mean,Y
+10,NB section 6.6,L514,reduction 98%,scalar,recalc 1-0.0018/0.0949,98.10%,Y,~1%,validated,Y
+11,NB section 6.6,L516,"std 9.57 (n=0)",scalar,nb cell10 output,9.5671,Y,exact rounded,no hedging std,Y
+12,NB section 6.6,L516,"std 0.21 (n=84)",scalar,nb cell10 output,0.2125,Y,exact rounded,daily hedging std,Y
+13,NB section 6.6,L518,"range 60.0 (n=0)",scalar,nb cell10 12.9651-(-47.0061)=59.97,59.97,Y,~0.05,no hedging amplitude,Y
+14,NB section 6.6,L518,"range 2.7 (n=84)",scalar,nb cell10 1.0952-(-1.6162)=2.71,2.71,Y,~0.01,daily hedging amplitude,Y
+15,NB section 6.6,L520,std divided by 7.9 (n=1 to n=84),ratio,1.6775/0.2125,7.89,Y,~0.05,validated,Y
+16,NB section 7.4,L718,"mean -0.0589 (mu=r n=1)",scalar,nb cell17,-0.0589,Y,exact,Y,Y
+17,NB section 7.4,L718,"mean 0.0013 (mu=r n=84)",scalar,nb cell17,0.0013,Y,exact,Y,Y
+18,NB section 7.4,L721,"mean -0.1382 (mu<r n=1)",scalar,nb cell17,-0.1382,Y,exact,Y,Y
+19,NB section 7.4,L722,"mean -0.0756 (mu>r n=1)",scalar,nb cell17,-0.0756,Y,exact,Y,Y
+20,NB section 8.8,L1064,"std 0.07 (n=252 digital)",scalar,nb cell29,0.0718,Y,exact rounded,Y,Y
+21,NB section 8.8,L1064,reduction 77% digital,scalar,recalc 1-0.07/0.31,77%,Y,~1%,Y,Y
+22,NB section 8.8,L1068,"range 1.31 (n=252 digital)",scalar,nb cell29 0.4962-(-0.8185)=1.31,1.31,Y,~0.01,Y,Y
