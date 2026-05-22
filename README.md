@@ -1,6 +1,6 @@
 # Delta Hedging in the Black-Scholes Framework
 
-This project provides a comprehensive numerical analysis of the discrete-time delta hedging strategy for European Call Options within the Black-Scholes market model. It explores the relationship between rebalancing frequency and hedging error variance through Monte Carlo simulations.
+This project provides a numerical analysis of the discrete-time delta hedging strategy for European Call Options within the Black-Scholes market model. It studies the relationship between rebalancing frequency and hedging error variance via Monte Carlo simulation.
 
 ## Problem Overview
 
@@ -10,8 +10,8 @@ This study quantifies this error and demonstrates its convergence properties as 
 
 ## Features
 
-- **Theoretical Rigor**: Includes the mathematical derivation of the self-financing property and the implementation of Black-Scholes pricing and Greeks (Delta and Gamma).
-- **Simulation Engine**: A robust Monte Carlo framework to simulate asset price trajectories using Euler discretization.
+- **Theoretical Framework**: Derivation of the self-financing property and implementation of Black-Scholes pricing and Delta for both European call and digital call options.
+- **Simulation Engine**: Monte Carlo simulation of asset price trajectories via Euler discretization of the GBM SDE.
 - **Dynamic Rebalancing**: Implementation of discrete-time hedging logic that adjusts the portfolio at specified intervals.
 - **Statistical Analysis**: Extensive evaluation of hedging error distributions, including mean, standard deviation, and tail risk (Min/Max).
 - **Comparison of Frequencies**: Analysis across various regimes:
@@ -67,3 +67,9 @@ To run the analysis and generate the plots:
 1. Open the `Delta_Hedging_Analysis.ipynb` notebook in VS Code or Jupyter Lab.
 2. Run all cells to execute the Monte Carlo simulations.
 3. Observe the convergence behavior in the "Visualization" section.
+
+The random seed is fixed (`np.random.seed(42)`) so all reported figures are reproducible bit-for-bit.
+
+## Auteur
+
+Dan Allouche
