@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deltahedge"
+version = "0.2.0"
+description = "Discrete-time delta hedging in the Black-Scholes framework: convergence, transaction costs, volatility misspecification and model risk."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Dan Allouche" }]
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4", "ipykernel>=6", "nbconvert>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+# Notebooks use notebook idioms (semicolons to suppress output, imports after a
+# sys.path bootstrap) and the builder embeds cell source as string literals, so
+# the whole notebooks/ tree is excluded; the library and tests are linted fully.
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "NPY"]
+ignore = ["E741"]
